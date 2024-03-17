@@ -25,26 +25,26 @@ const Login = () => {
 
                         <div >
                             <div>
-                                <label style={{ color: '#24786D' }}>Your Email</label>
+                                <label style={{ color: '#24786D' }}>Số Điện Thoại</label>
                                 <div style={{ justifyContent: 'center', alignItems: 'center', display: 'flex' }}>
 
-                                    <input style={{ width: 380, outline: 'none', border: 'none', borderBottom: '1px solid #ccc' }} type='text' placeholder='Username'></input>
+                                    <input style={{ width: 380, outline: 'none', border: 'none', borderBottom: '1px solid #ccc' }} type='text' placeholder='Số Điện Thoại'></input>
                                 </div>
                             </div>
                             <div style={{ marginTop: 20 }}>
-                                <label style={{ color: '#24786D' }}>Password</label>
+                                <label style={{ color: '#24786D' }}>Mật Khẩu</label>
                                 <div style={{ justifyContent: 'center', alignItems: 'center', display: 'flex' }}>
-                                    <input style={{ width: 380, outline: 'none', border: 'none', borderBottom: '1px solid #ccc' }} type='password' placeholder='Username'></input>
+                                    <input style={{ width: 380, outline: 'none', border: 'none', borderBottom: '1px solid #ccc' }} type='password' placeholder='Mật Khẩu'></input>
                                 </div>
                             </div>
                         </div>
                         <div style={{ justifyContent: 'center', alignItems: 'center', display: 'flex', marginTop: 30 }}>
                             <button style={{ width: 380, height: 40, backgroundColor: '#24786D', border: 'none', borderRadius: 9 }}
                                 onClick={() => navigate('/home')}
-                            > <span style={{ color: 'white', fontWeight: 'bold' }}>Login</span> </button>
+                            > <span style={{ color: 'white', fontWeight: 'bold' }}>Đăng Nhập</span> </button>
                         </div>
                         <div style={{ justifyContent: 'center', alignItems: 'center', display: 'flex' ,marginTop:10}} >
-                            <a style={{ color: '#24786D', fontWeight: 'inherit' }} href='#'>Forgot password?</a>
+                            <a style={{ color: '#24786D', fontWeight: 'inherit' }} href='#'>Quên mật khẩu?</a>
                         </div>
                     </div>
 
