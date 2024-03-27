@@ -4,7 +4,7 @@ import Login from './components/Login';
 import Home from './components/Home/Home';
 import Resgister from './components/Resgister';
 import OptionList from './components/OptionList/OptionList';
-
+import Verify from './components/Verify'
 
 function App() {
   
@@ -15,6 +15,7 @@ function App() {
     <Route path='/login' element={<Login/>}/>
     <Route path='/home' element={<Home/>} />
     <Route path='/register' element={<Resgister/>} />
+    <Route path='/verify' element={<Verify/>}/>
     <Route path='/optionlist' element={<OptionList/>}/>
    </Routes>
    
