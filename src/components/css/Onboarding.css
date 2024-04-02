@@ -1,0 +1,106 @@
+.loginButton {
+    width: 380px;
+    height: 40px;
+    background-color:'#fdfdfdfd';
+    border: none;
+<<<<<<< HEAD
+    border-radius: 999px;
+    border:'none';
+=======
+    border-radius: 9px;
+    border: 2px solid black;
+>>>>>>> 02e8de678cd39a66e25e95075819bdcdc87a8ff7
+    cursor: pointer;
+  }
+  
+  .loginButton:hover {
+<<<<<<< HEAD
+    background-color: #76ABAE; 
+    color: white; 
+  }
+
+=======
+    background-color: black; /* Màu nền đổi thành đen khi hover */
+    color: white; /* Màu chữ đổi thành trắng để dễ đọc */
+  }
+/* FormStyles.css */
+>>>>>>> 02e8de678cd39a66e25e95075819bdcdc87a8ff7
+.formRegiserStyle {
+    width: 400px;
+    height: 600px;
+    background-color: white;
+   
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+<<<<<<< HEAD
+    border-radius: 10px;
+    border: 2px solid #222831;
+    transition: box-shadow 0.3s ease; 
+  }
+  .formRegiserStyle.shadow {
+    box-shadow: 0px 0px 50px rgba(118, 171, 174, 1)
+    ; 
+=======
+    border-radius: 5px;
+    border: 2px solid black;
+    transition: box-shadow 0.3s ease; /* Thêm transition cho hiệu ứng mờ */
+  }
+  .formRegiserStyle.shadow {
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.2); /* Đổ bóng khi input được focus */
+>>>>>>> 02e8de678cd39a66e25e95075819bdcdc87a8ff7
+  }
+.formStyle {
+    width: 400px;
+    height: 400px;
+    background-color: white;
+<<<<<<< HEAD
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #222831;
+=======
+   
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 5px;
+    border: 2px solid black;
+>>>>>>> 02e8de678cd39a66e25e95075819bdcdc87a8ff7
+    transition: box-shadow 0.3s ease; /* Thêm transition cho hiệu ứng mờ */
+  }
+  
+  .formStyle.shadow {
+<<<<<<< HEAD
+    box-shadow: 0px 0px 50px rgba(118, 171, 174, 1)
+    ; /* Đổ bóng khi input được focus */
+=======
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.2); /* Đổ bóng khi input được focus */
+>>>>>>> 02e8de678cd39a66e25e95075819bdcdc87a8ff7
+  }
+  /* BackgroundStyles.css */
+  /* @keyframes slideDiagonal {
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: 100% 100%;
+    }
+  } */
+  
+.diagonalBackground {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+<<<<<<< HEAD
+    background-color: #EEEEEE;
+=======
+    background-color: #fdfdfdfd;
+>>>>>>> 02e8de678cd39a66e25e95075819bdcdc87a8ff7
+    /* background-image: url('../Home//image/Hyper.svg');
+    background-size: cover;
+    animation: slideDiagonal 5s linear infinite; */
+  }
+  
