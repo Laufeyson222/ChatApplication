@@ -42,12 +42,9 @@ const Register = () => {
   return (
     <div className="diagonalBackground">
       <div>
-        <div style={{ position: 'relative' }}>
-          <h1 style={{ fontSize: 40, fontWeight: 'bolder', textAlign: 'center',color:'#76ABAE' }}>Đăng ký tài khoản</h1>
-          
-        </div>
         <div className={`formRegiserStyle ${isFocused ? 'shadow' : ''}`}>
           <form onSubmit={handleSubmit} >
+          <h1 style={{ fontSize: 40, fontWeight: 'bolder', textAlign: 'center',color:'#76ABAE' }}>Đăng ký tài khoản</h1>
             {error && <p style={{ color: 'red', textAlign: 'center' }}>{error}</p>}
             {/* Map through each input field */}
             {[

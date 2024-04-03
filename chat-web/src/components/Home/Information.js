@@ -27,7 +27,9 @@ export default function Information() {
         <div style={{width:350,marginTop:20}}>
           <h3>Hình Ảnh</h3>
         </div>
-        <div style={{width:384,marginTop:20,display:'flex',flexDirection:'row',overflowY: 'visible',overflowX:'scroll'}}>
+
+        <div style={{width:375,marginTop:20,display:'flex',flexDirection:'row',overflowY: 'visible',overflowX:'scroll'}}>
+
           <img src={require('./image/avt.jpg')} style={{marginRight:10,width:120,height:120}}/>
           <img src={require('./image/avt.jpg')} style={{marginRight:10,width:120,height:120}}/>
           <img src={require('./image/avt.jpg')} style={{marginRight:10,width:120,height:120}}/>

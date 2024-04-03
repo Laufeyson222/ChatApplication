@@ -4,70 +4,61 @@ import { PiUserListBold } from "react-icons/pi";
 import { HiOutlineLogout } from "react-icons/hi";
 import { IoSettingsOutline } from "react-icons/io5";
 import { IoIosInformationCircleOutline } from "react-icons/io";
-import { Avatar } from 'antd'
-import React, { useState } from 'react'
+import { Avatar } from 'antd';
+import axios from 'axios';
+import React, { useState , useEffect} from 'react'
 import { useNavigate } from 'react-router-dom';
+import '../css/Tool.css';
+
 export default function Tool() {
-const [isHovered, setHovered] = useState(false);
-const [isHovered1, setHovered1] = useState(false);
-const [isHovered2, setHovered2] = useState(false);
-const [isHovered3, setHovered3] = useState(false);
-const [isHovered4, setHovered4] = useState(false);
-  const handleMouseEnter = () => {
-    setHovered(true);
-  };
-  const handleMouseLeave = () => {
-    setHovered(false);
-  };
-  const handleMouseEnter1 = () => {
-    setHovered1(true);
-  };
-  const handleMouseLeave1 = () => {
-    setHovered1(false);
-  };
-  const handleMouseEnter2 = () => {
-    setHovered2(true);
-  };
-  const handleMouseLeave2 = () => {
-    setHovered2(false);
-  };
-  const handleMouseEnter3 = () => {
-    setHovered3(true);
-  };
-  const handleMouseLeave3 = () => {
-    setHovered3(false);
-  };
-  const handleMouseEnter4 = () => {
-    setHovered4(true);
-  };
-  const handleMouseLeave4 = () => {
-    setHovered4(false);
-  };
   const navigate = useNavigate();
+  const [isModalOpen, setIsModalOpen] = useState(false);
+//   const openModal = () => setIsModalOpen(true);
+//   const closeModal = () => setIsModalOpen(false);
+//   const [userInfo, setUserInfo] = useState({});
+//   const [isLoading, setIsLoading] = useState(true);
+  const handleLogout = () => {
+    // Xóa thông tin đăng nhập từ local storage
+    localStorage.removeItem('isLoggedIn');
+    // Chuyển hướng người dùng đến trang đăng nhập hoặc trang chính của ứng dụng
+    window.location.href = '/login'; // Thay '/login' bằng đường dẫn đến trang đăng nhập của bạn
+};
+// useEffect(() => {
+//     const fetchUserInfo = async () => {
+//       try {
+//         const response = await axios.get('https://example.com/api/userinfo');
+//         setUserInfo(response.data);
+//         setIsLoading(false);
+//       } catch (error) {
+//         console.error('Failed to fetch user info:', error);
+//       }
+//     };
+
+//     if (isModalOpen) {
+//       fetchUserInfo();
+//     }
+//   }, [isModalOpen]);
+
   return (
-    <div style={{ background:'#24786D',height:'100vh',display:'flex',flexDirection:'column',alignItems:'center',justifyContent:'space-around'}}>
+    <div className="tool-container">
         <Avatar style={{width:48,height:48,border: '2px solid white'}} src={require('./image/avt.jpg')} />
-        <div style={{width:60,height:60,borderRadius:10,display:'flex',alignItems:'center',justifyContent:'center',background: isHovered ? '#014452' : 'transparent'}}  
-            onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-            <BiMessageSquareDetail style={{fontSize:30}}/>
+        <div className='wrapper' title='Thông tin cá nhân'>
+            <BiMessageSquareDetail className="icon" style={{fontSize:30}}/>
         </div>
-        <div style={{width:60,height:60,borderRadius:10,display:'flex',alignItems:'center',justifyContent:'center',background: isHovered1 ? '#014452' : 'transparent'}}  
-            onMouseEnter={handleMouseEnter1} onMouseLeave={handleMouseLeave1}>
-            <PiUserListBold style={{fontSize:30}} onClick={()=> navigate('/optionlist')} />
+        <div className='wrapper' title='Danh sách bạn bè'>
+            <PiUserListBold className="icon" style={{fontSize:30}} onClick={()=> navigate('/optionlist')} />
             
         </div>
-        <div style={{width:60,height:60,borderRadius:10,display:'flex',alignItems:'center',justifyContent:'center',background: isHovered2 ? '#014452' : 'transparent'}}  
-            onMouseEnter={handleMouseEnter2} onMouseLeave={handleMouseLeave2}>
-            <IoIosInformationCircleOutline style={{fontSize:30}}/>
+        <div className='wrapper'>
+            <IoIosInformationCircleOutline className="icon info" style={{fontSize:30}}/>
         </div>
-        <div style={{width:60,height:60,borderRadius:10,display:'flex',alignItems:'center',justifyContent:'center',background: isHovered3 ? '#014452' : 'transparent'}}  
-            onMouseEnter={handleMouseEnter3} onMouseLeave={handleMouseLeave3}>
-            <IoSettingsOutline style={{fontSize:30}}/>
+        <div className='wrapper' title='Cài đặt'>
+            <IoSettingsOutline className="icon" style={{fontSize:30}}/>
         </div>
-        <div style={{width:60,height:60,borderRadius:10,display:'flex',alignItems:'center',justifyContent:'center',background: isHovered4 ? '#014452' : 'transparent'}}  
-            onMouseEnter={handleMouseEnter4} onMouseLeave={handleMouseLeave4}>
-            <HiOutlineLogout style={{fontSize:30}}/>
+        <div className='wrapper' title='Đăng xuất'>
+            <HiOutlineLogout onClick={handleLogout} className="icon" style={{fontSize:30}}/>
         </div>
+        
     </div>
   )
 }

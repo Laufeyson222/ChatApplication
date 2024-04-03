@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link,useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 import axios from 'axios';
@@ -78,7 +78,7 @@ const Login = () => {
                                 > <span style={{ fontWeight: 'bold' }}>Đăng Nhập</span> </button>
                             </div>
                             <div style={{ justifyContent: 'center', alignItems: 'center', display: 'flex', marginTop: 10 }} >
-                                <a style={{ color: 'black', fontWeight: 'inherit',color:'#76ABAE' }} href='#'>Quên mật khẩu?</a>
+                                <a onClick={()=>navigate('/forgotpassword')} style={{ color: 'black', fontWeight: 'inherit',color:'#76ABAE' }} href=''>Quên mật khẩu?</a>
                             </div>
                         </div>
                     </div>
